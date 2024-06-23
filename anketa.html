@@ -1,0 +1,46 @@
+<script>
+    const birthday = prompt('Введіть рік вашого народження');
+    if(birthday === null){
+        alert(`Шкода, що ви не захотіли ввести рік свого народження`);
+    } else {}
+
+    const town = prompt('Введіть місто, в якому ви живете');
+    if(town === null){
+        alert(`Шкода, що ви не захотіли ввести місто, в якому ви живете`);
+    } else {}
+
+    const sport = prompt('Введіть ваш улюблений вид спорту');
+    if(sport === null){
+        alert(`Шкода, що ви не захотіли ввести свій улюблений вид спорту`);
+    } else {}
+
+    const currentYear = new Date().getFullYear(); //визначаємо поточний рік
+
+    const age = currentYear - birthday; // визначаємо вік користувача
+
+    let townMessage;
+    if(town.toLowerCase() === "київ"){
+        townMessage = "Ти живеш у столиці України";
+    } else if(town.toLowerCase() === "лондон"){
+        townMessage = "Ти живеш у столиці Великобританії";
+    }else if(town.toLowerCase() === "вашингтон"){
+        townMessage = "Ти живеш у столиці США";
+    } else {
+        townMessage = `Ти живеш у місті ${town}`;
+    }
+
+    let sportMessage;
+    if(sport.toLowerCase() === "футбол"){
+        sportMessage = "Круто! Хочеш стати як Ліонель Мессі?";
+    } else if(sport.toLowerCase() === "баскетбол"){
+        sportMessage = "Круто! Хочеш стати як Майкл Джордан?";
+    } else if(sport.toLowerCase() === "теніс"){
+        sportMessage = "Круто! Хочеш стати як Еліна Світоліна?";
+    } else {
+        sportMessage = `Ваш улюблений вид спорту: ${sport}`;
+    }
+
+    alert(`Ваш вік: ${age}\n${townMessage}\n${sportMessage}`);
+
+
+</script>
